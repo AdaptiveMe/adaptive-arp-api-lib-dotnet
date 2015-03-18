@@ -15,4 +15,4 @@ script:
  - xbuild /p:Configuration=Release adaptive-arp-api.sln
 cache:
  directories:
-  - $HOME/adaptive-arp-api/packages
+  - /home/travis/build/AdaptiveMe/adaptive-arp-api-lib-dotnet/adaptive-arp-api/packages
