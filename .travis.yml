@@ -2,7 +2,6 @@ sudo: false
 language: csharp
 mono:
  - latest
- - 3.12.1
 solution: adaptive-arp-api.sln
 before_install: cd adaptive-arp-api
 install:
