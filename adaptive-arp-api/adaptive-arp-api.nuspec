@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>AdaptiveMe.Api</id>
+    <version>0.1</version>
+    <title>AdaptiveMe Runtime Platform API Libraries for .NET</title>
+    <authors>Carlos Lozano Diez</authors>
+    <owners>Carlos Lozano Diez</owners>
+    <licenseUrl>https://raw.githubusercontent.com/AdaptiveMe/AdaptiveMe.github.io/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/AdaptiveMe/adaptive-arp-api-lib-dotnet</projectUrl>
+    <iconUrl>https://avatars0.githubusercontent.com/u/5918529</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>AdaptiveMe Runtime Platform API Specification Libraries for .NET</description>
+    <releaseNotes>AdaptiveMe Runtime Platform API v2.2.0 Specification.</releaseNotes>
+    <copyright>Copyright (c) 2013-2015 Carlos Lozano Diez / adaptive.me</copyright>
+    <tags>AdaptiveMe Runtime Platform ARP</tags>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="6.0.8" />
+    </dependencies>
+  </metadata>
+</package>

@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 // Information about this assembly is defined by the following attributes.
 // Change them to the values specific to your project.
 
-[assembly: AssemblyTitle ("adaptive-arp-api")]
-[assembly: AssemblyDescription ("")]
+[assembly: AssemblyTitle ("AdaptiveArpApi")]
+[assembly: AssemblyDescription ("AdaptiveMe Runtime Platform API Libraries for .NET")]
 [assembly: AssemblyConfiguration ("")]
-[assembly: AssemblyCompany ("")]
-[assembly: AssemblyProduct ("")]
-[assembly: AssemblyCopyright ("clozano")]
-[assembly: AssemblyTrademark ("")]
+[assembly: AssemblyCompany ("Adaptive.me")]
+[assembly: AssemblyProduct ("Adaptive Runtime Platform")]
+[assembly: AssemblyCopyright ("Copyright (c) 2013-2015 Carlos Lozano Diez / adaptive.me")]
+[assembly: AssemblyTrademark ("Adaptive.me AdaptiveMe Runtime Platform")]
 [assembly: AssemblyCulture ("")]
 
 // The assembly version has the format "{Major}.{Minor}.{Build}.{Revision}".

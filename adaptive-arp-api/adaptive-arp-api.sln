@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adaptive-arp-api", "adaptive-arp-api.csproj", "{790CD5E9-32D6-432C-99CC-63885C4F20F0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BB6504EE-0D2A-43C5-ABD4-0D02EE47E5F9}"
+	ProjectSection(SolutionItems) = preProject
+		adaptive-arp-api.nuspec = adaptive-arp-api.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +18,10 @@ Global
 		{790CD5E9-32D6-432C-99CC-63885C4F20F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{790CD5E9-32D6-432C-99CC-63885C4F20F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{790CD5E9-32D6-432C-99CC-63885C4F20F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		description = This is a description.
 	EndGlobalSection
 EndGlobal
