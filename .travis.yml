@@ -5,6 +5,7 @@ mono:
 solution: adaptive-arp-api.sln
 before_install: cd adaptive-arp-api
 after_success:
+ - cd ..
  - echo Home is: $HOME
  - ls -Rlart
 install:
