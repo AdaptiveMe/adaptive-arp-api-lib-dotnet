@@ -5,6 +5,9 @@ mono:
 solution: adaptive-arp-api.sln
 before_install: cd adaptive-arp-api
 install:
-- nuget restore adaptive-arp-api.sln
+ - nuget restore adaptive-arp-api.sln
 script:
-- xbuild /p:Configuration=Release adaptive-arp-api.sln
+ - xbuild /p:Configuration=Release adaptive-arp-api.sln
+cache:
+ directories:
+  - $HOME/adaptive-arp-api/packages
