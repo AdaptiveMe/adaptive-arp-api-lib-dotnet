@@ -60,9 +60,14 @@ namespace changeVersionNuget
 
 		static void ChangeVersion(XDocument document, string file, string version) {
 			XElement element = document.Root.Element ("metadata").Element ("version");
+
 			Console.WriteLine ("Current version: "+element.Value);
 			element.Value = version;
 			Console.WriteLine ("    New version: "+element.Value);
+
+			XElement element2 = document.Root.Element ("metadata").Element ("releaseNotes");
+			element2.Value = "AdaptiveMe Runtime Platform API v"+version+" Specification.";
+
 			if (File.Exists(file+".new")) {
 				File.Delete(file+".new");
 			}
