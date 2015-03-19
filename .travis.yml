@@ -4,12 +4,18 @@ mono:
  - latest
 solution: adaptive-arp-api.sln
 before_install: cd adaptive-arp-api
+after_install:
+ - export GIT_TAG=`git describe --abbrev=0`
+ - mono ./tools/changeVersionNuget.exe -p adaptive-arp-api.nuspec -v $GIT_TAG
+ - mono ./tools/changeSourcesProject.exe -p adaptive-arp-api.csproj -s Sources/
 after_success:
   if [ "$TRAVIS_BRANCH" == "$TRAVIS_TAG" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
 
     echo This will distribute!
 
-  fi
+ else
+   nuget pack adaptive-arp-api.nuspec
+ fi
 install:
  - nuget restore adaptive-arp-api.sln
 script:
