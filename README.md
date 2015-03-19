@@ -1,4 +1,4 @@
-# AdaptiveMe Runtime API Specification Libraries for .NET
+# AdaptiveMe API Libraries for .NET
 [![Build Status](https://travis-ci.org/AdaptiveMe/adaptive-arp-api-lib-dotnet.svg?branch=master)](https://travis-ci.org/AdaptiveMe/adaptive-arp-api-lib-dotnet)
 [![GitHub tag](https://img.shields.io/github/tag/AdaptiveMe/adaptive-arp-api-lib-dotnet.svg)](https://github.com/AdaptiveMe/adaptive-arp-api-lib-dotnet) 
 [![License](https://img.shields.io/badge/license-apache%202-blue.svg)](https://raw.githubusercontent.com/AdaptiveMe/adaptive-arp-api/master/LICENSE) 
