@@ -1,6 +1,8 @@
 ﻿using System;
 using Mono.Options;
 using System.Collections.Generic;
+using System.IO;
+using System.Xml.Linq;
 
 namespace changeVersionProject
 {
@@ -17,9 +19,8 @@ namespace changeVersionProject
 
 		public static void Main (string[] args)
 		{
-			List<string> extra;
 			try {
-				extra = p.Parse (args);
+				p.Parse (args);
 			}
 			catch (OptionException e) {
 				Console.Write (COMMAND_NAME+": ");
@@ -30,6 +31,8 @@ namespace changeVersionProject
 
 			if (FileName == null || VersionId == null) {
 				ShowHelp ();
+			} else {
+				Process (FileName, VersionId);
 			}
 		}
 
@@ -41,5 +44,26 @@ namespace changeVersionProject
 			Console.WriteLine ("Options:");
 			p.WriteOptionDescriptions (Console.Out);
 		}
+
+		static void Process(string file, string version) {
+			if (File.Exists (file)) {
+				Stream s = File.Open (file, FileMode.Open);
+				XDocument d = XDocument.Load (s, LoadOptions.PreserveWhitespace);
+				s.Close ();
+				ChangeVersion (d, version);
+
+			} else {
+				Console.WriteLine ("File : '" + file + "' does not exist.");
+				Environment.Exit (-1);
+			}
+		}
+
+		static void ChangeVersion(XDocument document, string version) {
+			IEnumerable<XElement> childList = document.Elements();
+			foreach (XElement e in childList) {
+				Console.WriteLine (e);
+			}
+		}
+			
 	}
 }

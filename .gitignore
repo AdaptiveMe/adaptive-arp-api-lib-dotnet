@@ -17,3 +17,5 @@ obj
 
 packages
 *.userprefs
+
+buildtools/buildtools.userprefs
