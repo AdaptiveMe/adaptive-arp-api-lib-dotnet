@@ -10,3 +10,9 @@ adaptive-arp-api/packages/
 *.nupkg
 
 adaptive-arp-api/node_modules/
+
+bin
+
+obj
+
+packages
