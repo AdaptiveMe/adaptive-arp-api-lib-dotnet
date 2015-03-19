@@ -2,29 +2,14 @@
 [![Build Status](https://travis-ci.org/AdaptiveMe/adaptive-arp-api-lib-dotnet.svg?branch=master)](https://travis-ci.org/AdaptiveMe/adaptive-arp-api-lib-dotnet)
 [![GitHub tag](https://img.shields.io/github/tag/AdaptiveMe/adaptive-arp-api-lib-dotnet.svg)](https://github.com/AdaptiveMe/adaptive-arp-api-lib-dotnet) 
 [![License](https://img.shields.io/badge/license-apache%202-blue.svg)](https://raw.githubusercontent.com/AdaptiveMe/adaptive-arp-api/master/LICENSE) 
-[![Adaptive Nibble](https://img.shields.io/badge/libs-java-yellow.svg)](https://github.com/AdaptiveMe/adaptive-arp-api-lib-dotnet)  [![adaptive.me](https://img.shields.io/badge/adaptive-me-fdcb0e.svg)](http://adaptive.me)
+[![Adaptive Nibble](https://img.shields.io/badge/libs-dotnet-yellow.svg)](https://github.com/AdaptiveMe/adaptive-arp-api-lib-dotnet)  [![adaptive.me](https://img.shields.io/badge/adaptive-me-fdcb0e.svg)](http://adaptive.me)
 [![Adaptive Development Tools](https://raw.githubusercontent.com/AdaptiveMe/AdaptiveMe.github.io/master/assets/logos/transparent/Logo-adaptive-devtools.png)](#)
 
 ## Introduction
 
 ### About This Project
 
-This project downloads a JDK and runs an emulator to debug HTML5 applications...
-
 Todo :smile:
-
-## Installation
-
-TODO... :smile:
-
-1. Install node in you computer (if you don't have it yet :wink:): https://nodejs.org/download/
-2. Run ```npm i npm-adaptiveme-nibble -g``` from a terminal
-
-## Running
-
-TODO... :smile:
-
-1. Run ```nibble -p <uri>``` from a terminal
 
 ### About Adaptive Runtime Platform
 
