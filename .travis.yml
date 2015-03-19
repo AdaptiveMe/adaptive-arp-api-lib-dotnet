@@ -14,7 +14,9 @@ after_success:
     echo This will distribute!
 
  else
+ 
    nuget pack adaptive-arp-api.nuspec
+   
  fi
 install:
  - nuget restore adaptive-arp-api.sln
