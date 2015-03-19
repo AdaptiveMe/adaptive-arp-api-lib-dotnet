@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>AdaptiveMe.Api</id>
-    <version>2.0.0</version>
+    <version>1.9.9</version>
     <title>AdaptiveMe Runtime Platform API Libraries for .NET</title>
     <authors>Carlos Lozano Diez</authors>
     <owners>Carlos Lozano Diez</owners>
