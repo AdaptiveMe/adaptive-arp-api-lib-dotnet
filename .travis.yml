@@ -5,10 +5,11 @@ mono:
 solution: adaptive-arp-api.sln
 before_install: cd adaptive-arp-api
 after_success:
- - cd ..
- - echo Home is: $HOME
- - pwd
- - ls -Rlart
+  if [ "$TRAVIS_BRANCH" == "$TRAVIS_TAG" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+
+    echo This will distribute!
+
+  fi
 install:
  - nuget restore adaptive-arp-api.sln
 script:
