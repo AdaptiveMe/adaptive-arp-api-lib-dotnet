@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "changeVersionProject", "changeVersionProject\changeVersionProject.csproj", "{5B086973-C5D5-43DA-A1CF-7EA9D16494B8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "changeVersionNuget", "changeVersionNuget\changeVersionNuget.csproj", "{46E33574-0DC5-41EE-B1D6-879036D4FDD2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "changeSourcesProject", "changeSourcesProject\changeSourcesProject.csproj", "{2867E4F5-F0B3-4683-9FD7-5E1A4993D3B0}"
@@ -21,9 +19,5 @@ Global
 		{46E33574-0DC5-41EE-B1D6-879036D4FDD2}.Debug|x86.Build.0 = Debug|x86
 		{46E33574-0DC5-41EE-B1D6-879036D4FDD2}.Release|x86.ActiveCfg = Release|x86
 		{46E33574-0DC5-41EE-B1D6-879036D4FDD2}.Release|x86.Build.0 = Release|x86
-		{5B086973-C5D5-43DA-A1CF-7EA9D16494B8}.Debug|x86.ActiveCfg = Debug|x86
-		{5B086973-C5D5-43DA-A1CF-7EA9D16494B8}.Debug|x86.Build.0 = Debug|x86
-		{5B086973-C5D5-43DA-A1CF-7EA9D16494B8}.Release|x86.ActiveCfg = Release|x86
-		{5B086973-C5D5-43DA-A1CF-7EA9D16494B8}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal
