@@ -8,3 +8,5 @@ adaptive-arp-api/adaptive-arp-api.userprefs
 adaptive-arp-api/packages/
 
 *.nupkg
+
+adaptive-arp-api/node_modules/
