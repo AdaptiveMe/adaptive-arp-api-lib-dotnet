@@ -3,8 +3,8 @@ language: csharp
 mono:
  - latest
 solution: adaptive-arp-api.sln
-before_install: cd adaptive-arp-api
-after_install:
+before_install: 
+ - cd adaptive-arp-api
  - export GIT_TAG=`git describe --abbrev=0`
  - mono ./tools/changeVersionNuget.exe -p adaptive-arp-api.nuspec -v $GIT_TAG
  - mono ./tools/changeSourcesProject.exe -p adaptive-arp-api.csproj -s Sources/
