@@ -22,3 +22,5 @@ packages
 *.bkp
 
 *.mdb
+
+adaptive-arp-api/Sources/Adaptive.Arp.Impl/
