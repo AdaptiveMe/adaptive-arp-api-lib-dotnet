@@ -18,22 +18,20 @@ before_script:
 - git config --global user.name "carloslozano"
 - git config --global push.default simple
 - echo "https://${GH_TOKEN}:@github.com" > $HOME/.git/credentials
-after_success: |-
-  - if [ "$TRAVIS_BRANCH" == "$TRAVIS_TAG" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; 
-  - then
+after_success:
+  if [ "$TRAVIS_BRANCH" == "$TRAVIS_TAG" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     - nuget pack adaptive-arp-api.nuspec
     - nuget setApiKey $API_KEY
     - nuget push AdaptiveMe.Api.$GIT_TAG.nupkg
-  - elif [ "$TRAVIS_PULL_REQUEST" == "false" ]; 
-  - then
+  elif [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     - nuget pack adaptive-arp-api.nuspec
     - git remote set-url origin https://github.com/AdaptiveMe/adaptive-arp-api-lib-dotnet.git
     - git add -u
-    - git commit -m "Automatically updated by tools."
+    - git commit -m "Auto-updated project from sources."
     - git push origin HEAD:master
-  - else
+  else
     - nuget pack adaptive-arp-api.nuspec
-  - fi
+  fi
 install:
 - nuget restore adaptive-arp-api.sln
 script:
