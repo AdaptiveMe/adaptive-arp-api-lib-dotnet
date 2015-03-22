@@ -8,6 +8,16 @@ before_install:
 - export GIT_TAG=`git describe --abbrev=0`
 - mono ./tools/changeVersionNuget.exe -p adaptive-arp-api.nuspec -v $GIT_TAG
 - mono ./tools/changeSourcesProject.exe -p adaptive-arp-api.csproj -s Sources/
+before_script:
+- export HOME=`pwd`
+- export TIMESTAMP=`date`
+- export CURRENT_TAG=`git describe --abbrev=0`
+- mkdir -p .git
+- git config --global credential.helper "store --file=$HOME/.git/credentials"
+- git config --global user.email "carlos@adaptive.me"
+- git config --global user.name "carloslozano"
+- git config --global push.default simple
+- echo "https://${GH_TOKEN}:@github.com" > $HOME/.git/credentials
 after_success: |-
   if [ "$TRAVIS_BRANCH" == "$TRAVIS_TAG" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   nuget pack adaptive-arp-api.nuspec
