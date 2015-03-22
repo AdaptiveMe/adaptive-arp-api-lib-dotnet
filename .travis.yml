@@ -2,6 +2,8 @@ sudo: false
 language: csharp
 mono:
 - latest
+node_js:
+- '0.12'
 solution: adaptive-arp-api.sln
 before_install:
 - cd adaptive-arp-api
