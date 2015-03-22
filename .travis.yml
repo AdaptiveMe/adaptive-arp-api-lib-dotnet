@@ -1,31 +1,28 @@
 sudo: false
 language: csharp
 mono:
- - latest
+- latest
 solution: adaptive-arp-api.sln
-before_install: 
- - cd adaptive-arp-api
- - export GIT_TAG=`git describe --abbrev=0`
- - mono ./tools/changeVersionNuget.exe -p adaptive-arp-api.nuspec -v $GIT_TAG
- - mono ./tools/changeSourcesProject.exe -p adaptive-arp-api.csproj -s Sources/
-after_success:
+before_install:
+- cd adaptive-arp-api
+- export GIT_TAG=`git describe --abbrev=0`
+- mono ./tools/changeVersionNuget.exe -p adaptive-arp-api.nuspec -v $GIT_TAG
+- mono ./tools/changeSourcesProject.exe -p adaptive-arp-api.csproj -s Sources/
+after_success: |-
   if [ "$TRAVIS_BRANCH" == "$TRAVIS_TAG" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
-
-    nuget pack adaptive-arp-api.nuspec
-    
-    nuget setApiKey $API_KEY
-    
-    nuget push AdaptiveMe.Api.$GIT_TAG.nupkg
-
- else
- 
-   nuget pack adaptive-arp-api.nuspec
-   
- fi
+  nuget pack adaptive-arp-api.nuspec
+  nuget setApiKey $API_KEY
+  nuget push AdaptiveMe.Api.$GIT_TAG.nupkg
+  else
+  nuget pack adaptive-arp-api.nuspec
+  fi
 install:
- - nuget restore adaptive-arp-api.sln
+- nuget restore adaptive-arp-api.sln
 script:
- - xbuild /p:Configuration=Release adaptive-arp-api.sln
+- xbuild /p:Configuration=Release adaptive-arp-api.sln
 cache:
- directories:
+  directories:
   - /home/travis/build/AdaptiveMe/adaptive-arp-api-lib-dotnet/adaptive-arp-api/packages
+env:
+  global:
+    secure: Nr2+dNeBKK9dKdyA97Ib3K3wCXPQTwz2jBdKPAHd5lPFF6GvBvgibaEZ5g5Yz5yPJmS9yTcfBQhTpymnuSh6hd0r1wiy3WZIvzmfvmD+aF54g95BjjeyYzpOK6+2DHyJnTM6huvEeoTyL61H8ZqKz2aT3ggakwoswXRcKGcon90=
