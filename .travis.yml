@@ -23,8 +23,9 @@ after_success: |-
   nuget pack adaptive-arp-api.nuspec
   nuget setApiKey $API_KEY
   nuget push AdaptiveMe.Api.$GIT_TAG.nupkg
-  else
+  else if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   nuget pack adaptive-arp-api.nuspec
+  git remote set-url origin https://github.com/AdaptiveMe/adaptive-arp-api-lib-dotnet.git
   git add -u
   git commit -m "Automatically updated by tools."
   git push origin HEAD:master
