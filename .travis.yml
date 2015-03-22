@@ -27,7 +27,7 @@ after_success: |-
   nuget pack adaptive-arp-api.nuspec
   git add -u
   git commit -m "Automatically updated by tools."
-  git push origin
+  git push origin HEAD:master
   fi
 install:
 - nuget restore adaptive-arp-api.sln
