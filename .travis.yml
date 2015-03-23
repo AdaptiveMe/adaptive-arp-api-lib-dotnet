@@ -39,6 +39,24 @@ after_success:
     git commit -m "Auto-updated from sources ${GIT_TAG} at ${TIMESTAMP}."
     
     git push origin HEAD:master
+    
+    export SOURCE_HOME=`pwd`
+    
+    export SOURCE_TAG=`git describe --abbrev=0`
+    
+    mkdir -p temp
+    
+    cd temp
+    
+    git clone https://github.com/AdaptiveMe/adaptive-arp-api.git
+    
+    cd adaptive-arp-api
+    
+    export API_TAG=`git describe --abbrev=0`
+    
+    echo $SOURCE_TAG $API_TAG
+    
+    cd $SOURCE_HOME
   
   else
     
