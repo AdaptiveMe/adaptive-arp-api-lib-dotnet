@@ -62,10 +62,10 @@ after_success:
     
     if [ "$GIT_TAG" != "$API_TAG" ]; then
     
-      cd $SOURCE_HOME
+      git tag -a "${API_TAG}" -m "API Specification ${API_TAG}"
     
-      echo Drop tag "${API_TAG}"
-    
+      git push origin --tags
+
     fi
   
   else
