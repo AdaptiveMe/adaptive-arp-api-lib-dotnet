@@ -42,8 +42,6 @@ after_success:
     
     export SOURCE_HOME=`pwd`
     
-    export SOURCE_TAG=`git describe --abbrev=0`
-    
     mkdir -p temp
     
     cd temp
@@ -54,15 +52,15 @@ after_success:
     
     export API_TAG=`git describe --abbrev=0`
     
-    export API_TAG=`echo ${API_TAG}//[v]/ }`
+    export API_TAG=`echo ${API_TAG//[v]/ }`
     
-    echo $SOURCE_TAG $API_TAG
+    echo $GIT_TAG $API_TAG
     
-    if [ "$SOURCE_TAG" != "$API_TAG" ]; then
+    if [ "$GIT_TAG" != "$API_TAG" ]; then
     
       cd $SOURCE_HOME
     
-      echo Drop tag $API_TAG
+      echo Drop tag '$API_TAG'
     
     fi
   
