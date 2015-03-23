@@ -58,13 +58,13 @@ after_success:
     
     git push origin HEAD:master
     
-    echo Drop tag '$API_TAG'
+    echo Drop tag "${API_TAG}"
     
     if [ "$GIT_TAG" != "$API_TAG" ]; then
     
       cd $SOURCE_HOME
     
-      echo Drop tag '$API_TAG'
+      echo Drop tag "${API_TAG}"
     
     fi
   
