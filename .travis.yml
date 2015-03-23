@@ -58,8 +58,6 @@ after_success:
     
     git push origin HEAD:master
     
-    echo Drop tag "${API_TAG}"
-    
     if [ "$GIT_TAG" != "$API_TAG" ]; then
     
       git tag -a "${API_TAG}" -m "API Specification ${API_TAG}"
