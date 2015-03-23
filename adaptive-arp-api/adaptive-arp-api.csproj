@@ -327,6 +327,7 @@
 		<Compile Include="Sources\Adaptive.Arp.Api\MessagingBridge.cs" />
 		<Compile Include="Sources\Adaptive.Arp.Api\MessagingCallbackImpl.cs" />
 		<Compile Include="Sources\Adaptive.Arp.Api\NFCBridge.cs" />
+		<Compile Include="Sources\Adaptive.Arp.Api\NetworkEvent.cs" />
 		<Compile Include="Sources\Adaptive.Arp.Api\NetworkInfoBridge.cs" />
 		<Compile Include="Sources\Adaptive.Arp.Api\NetworkNamingBridge.cs" />
 		<Compile Include="Sources\Adaptive.Arp.Api\NetworkReachabilityBridge.cs" />
