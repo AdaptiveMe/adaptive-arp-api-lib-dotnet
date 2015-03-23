@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.0
+    * @version v2.2.1
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -167,7 +167,7 @@ public class RuntimeBridge : BaseSystemBridge, IRuntime, APIBridge
                     default:
                          // 404 - response null.
                          responseCode = 404;
-                         responseMessage = "RuntimeBridge does not provide the function '"+request.GetMethodName()+"' Please check your client-side API version; should be API version >= v2.2.0.";
+                         responseMessage = "RuntimeBridge does not provide the function '"+request.GetMethodName()+"' Please check your client-side API version; should be API version >= v2.2.1.";
                          break;
                }
                response.SetResponse(responseJSON);
