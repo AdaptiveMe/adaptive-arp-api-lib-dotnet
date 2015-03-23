@@ -38,7 +38,7 @@ namespace Adaptive.Arp.Api
 {
 
      /**
-        Interface for Managing the Network status listener events
+        Interface for Managing the Network status listener networkEvents
 
         @author Carlos Lozano Diez
         @since v2.0
@@ -58,19 +58,19 @@ namespace Adaptive.Arp.Api
           /**
              Called when network connection changes somehow.
 
-             @param event Change to this network.
+             @param networkEvent Change to this network.
              @since v2.0
           */
-          void OnResult(NetworkEvent event);
+          void OnResult(NetworkEvent networkEvent);
 
           /**
              Status received with warning
 
-             @param event Change to this network.
+             @param networkEvent Change to this network.
              @param warning Type of warning encountered during reading.
              @since v2.0
           */
-          void OnWarning(NetworkEvent event, INetworkStatusListenerWarning warning);
+          void OnWarning(NetworkEvent networkEvent, INetworkStatusListenerWarning warning);
 
      }
 }

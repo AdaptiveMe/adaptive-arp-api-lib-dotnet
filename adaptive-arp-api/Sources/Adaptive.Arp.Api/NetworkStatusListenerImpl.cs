@@ -39,7 +39,7 @@ namespace Adaptive.Arp.Api
 {
 
      /**
-        Interface for Managing the Network status listener events
+        Interface for Managing the Network status listener networkEvents
         Auto-generated implementation of INetworkStatusListener specification.
      */
      public class NetworkStatusListenerImpl : BaseListenerImpl, INetworkStatusListener
@@ -68,24 +68,24 @@ namespace Adaptive.Arp.Api
           /**
              Called when network connection changes somehow.
 
-             @param event Change to this network.
+             @param networkEvent Change to this network.
              @since v2.0
           */
-          public void OnResult(NetworkEvent event)
+          public void OnResult(NetworkEvent networkEvent)
           {
-               AppRegistryBridge.GetInstance().GetPlatformContextWeb().ExecuteJavaScript("Adaptive.handleNetworkStatusListenerResult( '"+GetId()+"', JSON.parse(" + GetJSONProcessor().SerializeObject(event) +") )");
+               AppRegistryBridge.GetInstance().GetPlatformContextWeb().ExecuteJavaScript("Adaptive.handleNetworkStatusListenerResult( '"+GetId()+"', JSON.parse(" + GetJSONProcessor().SerializeObject(networkEvent) +") )");
           }
 
           /**
              Status received with warning
 
-             @param event Change to this network.
+             @param networkEvent Change to this network.
              @param warning Type of warning encountered during reading.
              @since v2.0
           */
-          public void OnWarning(NetworkEvent event, INetworkStatusListenerWarning warning)
+          public void OnWarning(NetworkEvent networkEvent, INetworkStatusListenerWarning warning)
           {
-               AppRegistryBridge.GetInstance().GetPlatformContextWeb().ExecuteJavaScript("Adaptive.handleNetworkStatusListenerWarning( '"+GetId()+"', JSON.parse(" + GetJSONProcessor().SerializeObject(event) +"), JSON.parse(" + GetJSONProcessor().SerializeObject(warning) +") )");
+               AppRegistryBridge.GetInstance().GetPlatformContextWeb().ExecuteJavaScript("Adaptive.handleNetworkStatusListenerWarning( '"+GetId()+"', JSON.parse(" + GetJSONProcessor().SerializeObject(networkEvent) +"), JSON.parse(" + GetJSONProcessor().SerializeObject(warning) +") )");
           }
 
      }
