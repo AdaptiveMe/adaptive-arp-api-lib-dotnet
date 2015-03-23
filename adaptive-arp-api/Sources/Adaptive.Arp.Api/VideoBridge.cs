@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version 
+    * @version v2.2.0
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -131,7 +131,7 @@ public class VideoBridge : BaseMediaBridge, IVideo, APIBridge
                     default:
                          // 404 - response null.
                          responseCode = 404;
-                         responseMessage = "VideoBridge does not provide the function '"+request.GetMethodName()+"' Please check your client-side API version; should be API version >= .";
+                         responseMessage = "VideoBridge does not provide the function '"+request.GetMethodName()+"' Please check your client-side API version; should be API version >= v2.2.0.";
                          break;
                }
                response.SetResponse(responseJSON);
