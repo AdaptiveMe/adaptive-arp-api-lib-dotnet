@@ -37,30 +37,19 @@ using System;
 namespace Adaptive.Arp.Api
 {
      /**
-        Represents a specific application life-cycle stage.
+        Represents a network handover event on the system.
 
-        @author Francisco Javier Martin Bueno
-        @since v2.0
+        @author Ferran Vila Conesa
+        @since v2.2.1
         @version 1.0
      */
-     public class Lifecycle : APIBean
+     public class NetworkEvent : APIBean
      {
 
           /**
-             Represent the state of the app
-<p>
-Possible lifecycle States:
-<p>
-1. Starting    - Before starting.
-2. Started     - Start concluded.
-3. Running     - Accepts user interaction - running in foreground.
-4. Pausing     - Before going to background.
-4.1 PausedIdle - In background, no scheduled background activity (passive).
-4.2 PausedRun  - In background, scheduled background activity (periodic network access, gps access, etc.)
-5. Resuming    - Before going to foreground, followed by Running state.
-6. Stopping    - Before stopping.
+             New type of network of the event
           */
-          public LifecycleState State { get; set; }
+          public ICapabilitiesNet Network { get; set; }
           /**
              The timestamps in milliseconds when the event was fired.
           */
@@ -69,47 +58,47 @@ Possible lifecycle States:
           /**
              Default constructor
 
-             @since V2.0
+             @since V2.2.1
           */
-          public Lifecycle()  {
+          public NetworkEvent()  {
           }
 
           /**
              Constructor used by the implementation
 
-             @param State of the app
+             @param Network   of the app
              @param Timestamp Timestamp of the event
-             @since V2.0
+             @since V2.2.1
           */
-          public Lifecycle(LifecycleState state, long timestamp) : base () {
-               this.State = State;
+          public NetworkEvent(ICapabilitiesNet network, long timestamp) : base () {
+               this.Network = Network;
                this.Timestamp = Timestamp;
           }
 
           /**
-             Returns the state of the application
+             Network event getter
 
-             @return State of the app
-             @since V2.0
+             @return New network switched
+             @since V2.2.1
           */
-          public LifecycleState GetState() {
-               return this.State;
+          public ICapabilitiesNet GetNetwork() {
+               return this.Network;
           }
 
           /**
-             Set the State of the application
+             Network setter
 
-             @param State of the app
-             @since V2.0
+             @param Network New network switched
+             @since V2.2.1
           */
-          public void SetState(LifecycleState State) {
-               this.State = State;
+          public void SetNetwork(ICapabilitiesNet Network) {
+               this.Network = Network;
           }
 
           /**
-             Gets the timestamp in milliseconds of the event.
+             Returns the timestamp of the event
 
-             @return Timestamp of the event.
+             @return Timestamp of the event
              @since V2.2.1
           */
           public long GetTimestamp() {
@@ -117,9 +106,9 @@ Possible lifecycle States:
           }
 
           /**
-             Sets the timestamp in milliseconds of the event.
+             Sets the timestamp of the event
 
-             @param Timestamp Timestamp of the event.
+             @param Timestamp Timestamp of the event
              @since V2.2.1
           */
           public void SetTimestamp(long Timestamp) {

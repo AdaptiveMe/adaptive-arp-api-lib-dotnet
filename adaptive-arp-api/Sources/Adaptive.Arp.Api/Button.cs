@@ -50,6 +50,10 @@ namespace Adaptive.Arp.Api
              Button type
           */
           public ICapabilitiesButton Type { get; set; }
+          /**
+             Timestamp of the button event.
+          */
+          public long Timestamp { get; set; }
 
           /**
              Default constructor
@@ -63,10 +67,12 @@ namespace Adaptive.Arp.Api
              Constructor with fields
 
              @param Type Button type.
+             @param Timestamp Timestamp of the event
              @since V2.0
           */
-          public Button(ICapabilitiesButton type) : base () {
+          public Button(ICapabilitiesButton type, long timestamp) : base () {
                this.Type = Type;
+               this.Timestamp = Timestamp;
           }
 
           /**
@@ -87,6 +93,26 @@ namespace Adaptive.Arp.Api
           */
           public void SetType(ICapabilitiesButton Type) {
                this.Type = Type;
+          }
+
+          /**
+             Timestamp Getter
+
+             @return Timestamp
+             @since V2.2.1
+          */
+          public long GetTimestamp() {
+               return this.Timestamp;
+          }
+
+          /**
+             Timestamp Setter
+
+             @param Timestamp Timestamp
+             @since V2.2.1
+          */
+          public void SetTimestamp(long Timestamp) {
+               this.Timestamp = Timestamp;
           }
 
 

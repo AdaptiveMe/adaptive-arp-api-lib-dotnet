@@ -58,19 +58,19 @@ namespace Adaptive.Arp.Api
           /**
              Called when network connection changes somehow.
 
-             @param network Change to this network.
+             @param event Change to this network.
              @since v2.0
           */
-          void OnResult(ICapabilitiesNet network);
+          void OnResult(NetworkEvent event);
 
           /**
              Status received with warning
 
-             @param network Change to this network.
+             @param event Change to this network.
              @param warning Type of warning encountered during reading.
              @since v2.0
           */
-          void OnWarning(ICapabilitiesNet network, INetworkStatusListenerWarning warning);
+          void OnWarning(NetworkEvent event, INetworkStatusListenerWarning warning);
 
      }
 }

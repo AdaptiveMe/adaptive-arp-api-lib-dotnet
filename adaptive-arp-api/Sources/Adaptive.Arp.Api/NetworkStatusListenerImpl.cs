@@ -68,24 +68,24 @@ namespace Adaptive.Arp.Api
           /**
              Called when network connection changes somehow.
 
-             @param network Change to this network.
+             @param event Change to this network.
              @since v2.0
           */
-          public void OnResult(ICapabilitiesNet network)
+          public void OnResult(NetworkEvent event)
           {
-               AppRegistryBridge.GetInstance().GetPlatformContextWeb().ExecuteJavaScript("Adaptive.handleNetworkStatusListenerResult( '"+GetId()+"', JSON.parse(" + GetJSONProcessor().SerializeObject(network) +") )");
+               AppRegistryBridge.GetInstance().GetPlatformContextWeb().ExecuteJavaScript("Adaptive.handleNetworkStatusListenerResult( '"+GetId()+"', JSON.parse(" + GetJSONProcessor().SerializeObject(event) +") )");
           }
 
           /**
              Status received with warning
 
-             @param network Change to this network.
+             @param event Change to this network.
              @param warning Type of warning encountered during reading.
              @since v2.0
           */
-          public void OnWarning(ICapabilitiesNet network, INetworkStatusListenerWarning warning)
+          public void OnWarning(NetworkEvent event, INetworkStatusListenerWarning warning)
           {
-               AppRegistryBridge.GetInstance().GetPlatformContextWeb().ExecuteJavaScript("Adaptive.handleNetworkStatusListenerWarning( '"+GetId()+"', JSON.parse(" + GetJSONProcessor().SerializeObject(network) +"), JSON.parse(" + GetJSONProcessor().SerializeObject(warning) +") )");
+               AppRegistryBridge.GetInstance().GetPlatformContextWeb().ExecuteJavaScript("Adaptive.handleNetworkStatusListenerWarning( '"+GetId()+"', JSON.parse(" + GetJSONProcessor().SerializeObject(event) +"), JSON.parse(" + GetJSONProcessor().SerializeObject(warning) +") )");
           }
 
      }
