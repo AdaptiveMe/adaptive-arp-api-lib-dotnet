@@ -54,7 +54,7 @@ after_success:
     
     export API_TAG=`git describe --abbrev=0`
     
-    export API_TAG=${API_TAG}//[v]/ }
+    export API_TAG=`echo ${API_TAG}//[v]/ }`
     
     echo $SOURCE_TAG $API_TAG
     
