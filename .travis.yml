@@ -30,16 +30,6 @@ after_success:
     
   elif [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     
-    nuget pack adaptive-arp-api.nuspec
-    
-    git remote set-url origin https://github.com/AdaptiveMe/adaptive-arp-api-lib-dotnet.git
-    
-    git add -u
-    
-    git commit -m "Auto-updated from sources ${GIT_TAG} at ${TIMESTAMP}."
-    
-    git push origin HEAD:master
-    
     export SOURCE_HOME=`pwd`
     
     mkdir -p temp
@@ -54,7 +44,21 @@ after_success:
     
     export API_TAG=`echo ${API_TAG//[v]/ }`
     
-    echo $GIT_TAG $API_TAG
+    rm -Rf temp
+    
+    cd $SOURCE_HOME
+    
+    nuget pack adaptive-arp-api.nuspec
+    
+    git remote set-url origin https://github.com/AdaptiveMe/adaptive-arp-api-lib-dotnet.git
+    
+    git add -u
+    
+    git commit -m "Auto-updated from API sources ${API_TAG} at ${TIMESTAMP}."
+    
+    git push origin HEAD:master
+    
+    echo Drop tag '$API_TAG'
     
     if [ "$GIT_TAG" != "$API_TAG" ]; then
     
