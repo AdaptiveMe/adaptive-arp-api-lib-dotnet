@@ -80,4 +80,4 @@ cache:
   - /home/travis/build/AdaptiveMe/adaptive-arp-api-lib-dotnet/adaptive-arp-api/packages
 env:
   global:
-    secure: Nr2+dNeBKK9dKdyA97Ib3K3wCXPQTwz2jBdKPAHd5lPFF6GvBvgibaEZ5g5Yz5yPJmS9yTcfBQhTpymnuSh6hd0r1wiy3WZIvzmfvmD+aF54g95BjjeyYzpOK6+2DHyJnTM6huvEeoTyL61H8ZqKz2aT3ggakwoswXRcKGcon90=
+    secure: cRgAwm8Q/HFONE4nkXnsbIWJVhb/nlR8fhaf1OfxKfg40Xtk4WsVoyudLY94G9OPRMJl6TQMwd1mPtKv2YXkLcQ2b01eLYyyvvkFBKAAEMMw8FgsKNOT7S8I22EWL5UPA0FcO5F1hFdn3WDqkb9MxIFlXVwHnv8o2S1PAM9O8IA=
