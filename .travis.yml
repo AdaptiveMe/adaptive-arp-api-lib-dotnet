@@ -52,7 +52,7 @@ after_success:
     
     git remote set-url origin https://github.com/AdaptiveMe/adaptive-arp-api-lib-dotnet.git
     
-    git add -u
+    git add -A
     
     git commit -m "Auto-updated from API sources ${API_TAG} at ${TIMESTAMP}."
     
