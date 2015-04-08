@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.7
+    * @version v2.2.8
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -1334,7 +1334,7 @@ namespace Adaptive.Arp.Api
              Method that returns the API version of the implementation.
           */
           public String GetAPIVersion() {
-               return "v2.2.7";
+               return "v2.2.8";
           }
 
           /**

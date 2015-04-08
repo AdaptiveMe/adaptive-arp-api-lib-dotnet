@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.7
+    * @version v2.2.8
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -433,7 +433,7 @@ of the display. For display orientation, use the IDisplay APIs.
                     default:
                          // 404 - response null.
                          responseCode = 404;
-                         responseMessage = "DeviceBridge does not provide the function '"+request.GetMethodName()+"' Please check your client-side API version; should be API version >= v2.2.7.";
+                         responseMessage = "DeviceBridge does not provide the function '"+request.GetMethodName()+"' Please check your client-side API version; should be API version >= v2.2.8.";
                          break;
                }
                response.SetResponse(responseJSON);
