@@ -75,9 +75,6 @@ install:
 - nuget restore adaptive-arp-api.sln
 script:
 - xbuild /p:Configuration=Release adaptive-arp-api.sln
-cache:
-  directories:
-  - /home/travis/build/AdaptiveMe/adaptive-arp-api-lib-dotnet/adaptive-arp-api/packages
 env:
   global:
     secure: cRgAwm8Q/HFONE4nkXnsbIWJVhb/nlR8fhaf1OfxKfg40Xtk4WsVoyudLY94G9OPRMJl6TQMwd1mPtKv2YXkLcQ2b01eLYyyvvkFBKAAEMMw8FgsKNOT7S8I22EWL5UPA0FcO5F1hFdn3WDqkb9MxIFlXVwHnv8o2S1PAM9O8IA=
