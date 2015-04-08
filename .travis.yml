@@ -47,6 +47,10 @@ after_success:
     rm -Rf $SOURCE_HOME/temp
     
     cd $SOURCE_HOME
+
+    mono ./tools/changeVersionNuget.exe -p adaptive-arp-api.nuspec -v $GIT_TAG
+
+    mono ./tools/changeSourcesProject.exe -p adaptive-arp-api.csproj -s Sources/
     
     nuget pack adaptive-arp-api.nuspec
     
