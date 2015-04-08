@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.9
+    * @version v2.2.10
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -203,7 +203,7 @@ public class GeolocationBridge : BaseSensorBridge, IGeolocation, APIBridge
                     default:
                          // 404 - response null.
                          responseCode = 404;
-                         responseMessage = "GeolocationBridge does not provide the function '"+request.GetMethodName()+"' Please check your client-side API version; should be API version >= v2.2.9.";
+                         responseMessage = "GeolocationBridge does not provide the function '"+request.GetMethodName()+"' Please check your client-side API version; should be API version >= v2.2.10.";
                          break;
                }
                response.SetResponse(responseJSON);
