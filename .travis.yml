@@ -44,7 +44,7 @@ after_success:
     
     export API_TAG=`echo ${API_TAG//[v]/ }`
     
-    rm -Rf temp
+    rm -Rf $SOURCE_HOME/temp
     
     cd $SOURCE_HOME
     

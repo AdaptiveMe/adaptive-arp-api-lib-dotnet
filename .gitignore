@@ -24,3 +24,5 @@ packages
 *.mdb
 
 adaptive-arp-api/Sources/Adaptive.Arp.Impl/
+
+.gitconfig
