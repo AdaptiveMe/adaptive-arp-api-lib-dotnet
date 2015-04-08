@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/AdaptiveMe/adaptive-arp-api-lib-dotnet.svg?branch=master)](https://travis-ci.org/AdaptiveMe/adaptive-arp-api-lib-dotnet)
 [![GitHub tag](https://img.shields.io/github/tag/AdaptiveMe/adaptive-arp-api-lib-dotnet.svg)](https://github.com/AdaptiveMe/adaptive-arp-api-lib-dotnet) [![Nuget](https://img.shields.io/nuget/v/AdaptiveMe.Api.svg)](https://www.nuget.org/packages/AdaptiveMe.Api/) 
 [![License](https://img.shields.io/badge/license-apache%202-blue.svg)](https://raw.githubusercontent.com/AdaptiveMe/adaptive-arp-api/master/LICENSE) 
-[![Adaptive Nibble](https://img.shields.io/badge/libs-dotnet-yellow.svg)](https://github.com/AdaptiveMe/adaptive-arp-api-lib-dotnet)  [![adaptive.me](https://img.shields.io/badge/adaptive-me-fdcb0e.svg)](http://adaptive.me)
+[![dotNet Library](https://img.shields.io/badge/libs-dotnet-yellow.svg)](https://github.com/AdaptiveMe/adaptive-arp-api-lib-dotnet)  [![adaptive.me](https://img.shields.io/badge/adaptive-me-fdcb0e.svg)](http://adaptive.me)
 [![Adaptive Development Tools](https://raw.githubusercontent.com/AdaptiveMe/AdaptiveMe.github.io/master/assets/logos/normal/Logo-libraries-for-Windows.png)](#)
 
 ## Introduction
