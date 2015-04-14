@@ -43,7 +43,7 @@ namespace Adaptive.Arp.Api
         @since v2.0.4
         @version 1.0
      */
-     public class ServicePath
+     public class ServicePath : APIBean
      {
 
           /**

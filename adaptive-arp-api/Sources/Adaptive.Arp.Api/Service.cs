@@ -43,7 +43,7 @@ namespace Adaptive.Arp.Api
         @since v2.0
         @version 1.0
      */
-     public class Service
+     public class Service : APIBean
      {
 
           /**
