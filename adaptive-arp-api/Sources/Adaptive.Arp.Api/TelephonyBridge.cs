@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.10
+    * @version v2.2.11
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -134,7 +134,7 @@ public class TelephonyBridge : BaseCommunicationBridge, ITelephony, APIBridge
                     default:
                          // 404 - response null.
                          responseCode = 404;
-                         responseMessage = "TelephonyBridge does not provide the function '"+request.GetMethodName()+"' Please check your client-side API version; should be API version >= v2.2.10.";
+                         responseMessage = "TelephonyBridge does not provide the function '"+request.GetMethodName()+"' Please check your client-side API version; should be API version >= v2.2.11.";
                          break;
                }
                response.SetResponse(responseJSON);
