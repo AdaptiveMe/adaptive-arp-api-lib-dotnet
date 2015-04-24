@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>AdaptiveMe.Api</id>
-    <version>2.2.10</version>
+    <version>2.2.11</version>
     <title>AdaptiveMe Runtime Platform API Libraries for .NET</title>
     <authors>Carlos Lozano Diez</authors>
     <owners>Carlos Lozano Diez</owners>
@@ -11,7 +11,7 @@
     <iconUrl>https://avatars0.githubusercontent.com/u/5918529</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>AdaptiveMe Runtime Platform API Specification Libraries for .NET</description>
-    <releaseNotes>AdaptiveMe Runtime Platform API v2.2.10 Specification.</releaseNotes>
+    <releaseNotes>AdaptiveMe Runtime Platform API v2.2.11 Specification.</releaseNotes>
     <copyright>Copyright (c) 2013-2015 Carlos Lozano Diez / adaptive.me</copyright>
     <tags>AdaptiveMe Runtime Platform ARP</tags>
     <dependencies>
